@@ -146,7 +146,7 @@ export default function Layout({
               </ListItemButton>
             </ListItem>
           ))} */}
-           <Link href="/dashboard/sellbuy"><ListItem disablePadding>
+           <Link href="/dashboard/selldashboard"><ListItem disablePadding>
             <ListItemButton>
               {/* <ListItemIcon>
                 <InboxIcon />
@@ -154,7 +154,7 @@ export default function Layout({
               <ListItemText >View Selling Property</ListItemText>
             </ListItemButton>
           </ListItem></Link>
-          <Link href="/dashboard/rent"><ListItem disablePadding>
+          <Link href="/dashboard/buydashboard"><ListItem disablePadding>
             <ListItemButton>
               <ListItemText >View Rental Property</ListItemText>
             </ListItemButton>
