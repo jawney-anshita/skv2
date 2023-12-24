@@ -10,7 +10,7 @@ export async function GET(){
         await mongoose.connect(connectionSrt)
         data = await Property.find();
     } catch(error) {
-        data = {success: failed}
+       
     }
    
     console.log(data,":data");
@@ -19,15 +19,24 @@ export async function GET(){
 }
 
 export async function POST(request){
-
-    // const payload = await request.json();
+   console.log("request post data" , request.body);
+    const payload = await request.json();
+    console.log(payload, "request");
     await mongoose.connect(connectionSrt);
-    let property = new Property({
-        clientname:"String",
-        phone:200,
-        email:"String"
-    })
+    // let property = new Property({
+    //     clientname :"Me3",
+    //     phone: 100,
+    //     email:"me@gmail.com",
+    //     location: "mylocation",
+    //     address : "102 mh"
+    // })
+    let property = new Property(payload || "")
 
     const data = await property.save();
     return NextResponse.json(data)
 }
+
+
+    
+    
+export const dynamic = 'force-static'
