@@ -2,9 +2,7 @@ import {NextResponse} from "next/server";
 import mongoose from "mongoose";
 import { connectionSrt } from "../../../lib/db";
 import { Property } from "../../../lib/model/property";
-import {revalidatePath}from 'next/cache';
 
-export const revalidate = true;
 
 export async function GET(){
 
